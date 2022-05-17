@@ -1,6 +1,3 @@
-from ast import comprehension
-
-
 DATA = [
     {
         'name': 'Facundo',

@@ -77,6 +77,9 @@ def display_hangman(tries):
                         =========''']
     return HANGMAN_PICS[tries]
 
+def clear():
+    os.system('clear')
+
 
 def get_word():
     words = []
@@ -91,7 +94,7 @@ def play(random_word):
     guessed = False
     guessed_letters = []
     guessed_words = []
-    tries = 7
+    tries = 6
     print(HANGMAN_TITLE)
     print("Let's play Hangman!")
     print(display_hangman(tries))
@@ -128,6 +131,8 @@ def play(random_word):
                 word_completion = random_word
         else:
             print("Not a valid guess.")
+        clear()
+        print(HANGMAN_TITLE)
         print(display_hangman(tries))
         print(word_completion)
         print("\n")            
@@ -138,7 +143,7 @@ def play(random_word):
 
 def run():
     get_word()
-    play(random_word)
+    play(random_word=get_word())
 
 
 if __name__ == '__main__':

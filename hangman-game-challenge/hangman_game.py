@@ -15,7 +15,7 @@ HANGMAN_TITLE = """
 SMALL_TITLE = """
 █░█ ▄▀█ █▄░█ █▀▀ █▀▄▀█ ▄▀█ █▄░█
 █▀█ █▀█ █░▀█ █▄█ █░▀░█ █▀█ █░▀█
-"""
+        By Rodrigo Flores"""
 
 
 def display_hangman(tries):
@@ -132,7 +132,7 @@ def play(random_word):
         else:
             print("Not a valid guess.")
         clear()
-        print(HANGMAN_TITLE)
+        print(SMALL_TITLE)
         print(display_hangman(tries))
         print(word_completion)
         print("\n")            

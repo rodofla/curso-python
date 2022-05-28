@@ -1,5 +1,6 @@
 from curses.ascii import isalpha
-import os #To clear screen
+import os
+from pickle import NONE #To clear screen
 import random 
 
 # ------------- Sprites:
@@ -83,9 +84,9 @@ def clear():
 
 def get_word():
     words = []
-    with open("hangman-game-challenge/data.txt", "r", encoding="UTF-8") as f:
+    with open("/home/rodofla/personalProjects/proyectos_cursos/curso-python/hangman-game-challenge/data.txt", "r", encoding="UTF-8") as f:
         words = f.read()
-        random_word = random.choice(words.split())
+        random_word = random.choice(words.split()) 
     return random_word.upper()
 
 
@@ -143,7 +144,7 @@ def play(random_word):
 
 def run():
     get_word()
-    play(random_word=get_word())
+    play(get_word()) 
 
 
 if __name__ == '__main__':

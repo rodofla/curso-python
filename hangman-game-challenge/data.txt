@@ -1,9 +1,9 @@
 crema
-café
+cafe
 estrella
 explosión
 guitarra
-plástico
+plastico
 navaja
 martillo
 libros
@@ -22,7 +22,7 @@ perro
 llaves
 camisa
 pelo
-papá
+papa
 sillón
 felicidad
 catre

@@ -101,7 +101,6 @@ def replace():
     return word
 
 
-
 def play(word):
     word_completion = "_" * len(word)
     guessed = False

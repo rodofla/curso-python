@@ -19,6 +19,12 @@ SMALL_TITLE = """
 
 
 def display_hangman(tries):
+    """
+    It returns a string that is the ASCII art of the hangman
+    
+    :param tries: The number of tries the player has left
+    :return: The list of hangman pictures.
+    """
     HANGMAN_PICS = ['''  
                         +---+
                         |   |
@@ -78,18 +84,31 @@ def display_hangman(tries):
     return HANGMAN_PICS[tries]
 
 def clear():
+    """
+    It clears the terminal screen
+    """
     os.system('clear')
 
 
 def get_word():
+    """
+    It opens the file, reads the file, splits the file into a list of words, and then chooses a random
+    word from that list
+    :return: A random word from the data.txt file
+    """
     words = []
     with open("/home/rodofla/personalProjects/proyectos_cursos/curso-python/hangman-game-challenge/data.txt", "r", encoding="UTF-8") as f:
         words = f.read()
         random_word = random.choice(words.split()) 
     return random_word.upper()
 
-#a function who replace the wowels of random_word with acent with the same letter  (e.g. á -> a)
+
 def replace():
+    """
+    It takes a word, replaces all the accented vowels with their unaccented counterparts, and returns
+    the new word
+    :return: The word is being returned.
+    """
     word = get_word()
     word = word.replace("Á", "A")
     word = word.replace("É", "E")
@@ -100,6 +119,11 @@ def replace():
 
 
 def play(word):
+    """
+    The function play() takes a word as an argument and then runs a game of hangman with the user
+    
+    :param word: the word to be guessed
+    """
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []

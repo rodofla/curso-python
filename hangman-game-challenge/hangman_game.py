@@ -1,4 +1,3 @@
-from ctypes.wintypes import WORD
 from curses.ascii import isalpha
 import os
 from pickle import NONE #To clear screen
